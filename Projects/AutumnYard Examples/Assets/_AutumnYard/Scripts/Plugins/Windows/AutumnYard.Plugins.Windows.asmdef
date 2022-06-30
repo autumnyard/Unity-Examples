@@ -1,0 +1,16 @@
+{
+    "name": "AutumnYard.Plugins.Windows",
+    "rootNamespace": "",
+    "references": [
+        "GUID:08afbd275bd91eb4fb237ace6d4b0fee"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

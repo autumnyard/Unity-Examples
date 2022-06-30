@@ -1,0 +1,17 @@
+{
+    "name": "AutumnYard.Plugins.DOTween",
+    "rootNamespace": "",
+    "references": [
+        "GUID:a4d96c1038456a142b9e0c274e9efe29",
+        "GUID:7df456dcaca22b8469e5403d1ac8e2cf"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,19 @@
+{
+    "name": "AutumnYard.Tools.CLI",
+    "rootNamespace": "AutumnYard.Tools.CLI",
+    "references": [
+        "GUID:862a28f92924b1742b28bf9a364c9144",
+        "GUID:af866bd554f5aaf4287c9825ad2f1000"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

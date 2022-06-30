@@ -1,0 +1,19 @@
+{
+    "name": "AutumnYard.Tools.IO",
+    "rootNamespace": "AutumnYard.Tools.IO",
+    "references": [
+        "GUID:08afbd275bd91eb4fb237ace6d4b0fee",
+        "GUID:5672f9529ac35784fa93de3c186184ca",
+        "GUID:62f47e50bd3f51b47a8ba357c27d1262",
+        "GUID:0bed4143766853047a62c06e78d5e494"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

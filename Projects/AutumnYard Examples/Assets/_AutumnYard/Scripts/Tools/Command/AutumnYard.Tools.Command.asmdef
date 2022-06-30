@@ -1,0 +1,16 @@
+{
+    "name": "AutumnYard.Tools.Command",
+    "rootNamespace": "",
+    "references": [
+        "GUID:8957c4b34cbb08548a872adcd186c82b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

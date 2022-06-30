@@ -1,0 +1,18 @@
+{
+    "name": "AutumnYard.Plugins.LeanTween",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6c0a507a0d3737346b3b1bb36da73ee7",
+        "GUID:a4d96c1038456a142b9e0c274e9efe29",
+        "GUID:8957c4b34cbb08548a872adcd186c82b"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

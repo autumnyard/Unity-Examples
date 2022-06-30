@@ -1,0 +1,19 @@
+{
+    "name": "AutumnYard.Plugins.Steam",
+    "rootNamespace": "AutumnYard.Plugins.Steam",
+    "references": [],
+    "includePlatforms": [
+        "Editor",
+        "WindowsStandalone64"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [
+        "AUTUMNYARD_BUILD_STEAM"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

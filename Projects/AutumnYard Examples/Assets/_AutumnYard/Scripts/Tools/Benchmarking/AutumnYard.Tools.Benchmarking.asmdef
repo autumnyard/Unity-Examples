@@ -1,0 +1,14 @@
+{
+    "name": "AutumnYard.Tools.Benchmarking",
+    "rootNamespace": "AutumnYard.Tools.Benchmarking",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

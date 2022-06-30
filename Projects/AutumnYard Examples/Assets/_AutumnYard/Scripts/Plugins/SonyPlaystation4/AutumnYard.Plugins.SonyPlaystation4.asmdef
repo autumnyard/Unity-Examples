@@ -1,0 +1,16 @@
+{
+    "name": "AutumnYard.Plugins.SonyPlaystation4",
+    "rootNamespace": "",
+    "references": [],
+    "includePlatforms": [
+        "PS4"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
