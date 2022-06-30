@@ -1,13 +1,17 @@
 ﻿using System;
 using UnityEngine;
+using AutumnYard.Common;
+using AutumnYard.Common.Input;
 
 namespace AutumnYard.Example1
 {
-    //public sealed class GameDirector : SingleInstance<GameDirector>
     public sealed class GameDirector : MonoBehaviour
     {
         public enum State { Play, UI }
         private State _currentState;
+        public event Action<State> onChangeState;
+        public State CurrentState => _currentState;
+
         [SerializeField] private Player.PlayerActor playerPrefab;
         [SerializeField] private Player.PlayerConfiguration playerConfiguration;
         [SerializeField] private GameObject[] maps;
@@ -15,24 +19,19 @@ namespace AutumnYard.Example1
         private Player.PlayerActor _currentPlayer;
         [SerializeField] private UI.UIManager _ui;
 
-        public event Action<State> onChangeState;
-
-        public State CurrentState => _currentState;
-
         private void Awake()
         {
             //_ui = UI.UIManager.Instance;
-            SceneHandler.Instance.ForceSetCurrentContext(SceneHandler.Context.Game);
+            SceneHandler.Instance.ForceSetCurrentContext(SceneHandler.Context.Example1);
             _currentMap = LoadMap(0);
             LoadPlayer(Vector3.zero);
 
-            Input.InputManager.Instance.Actions.GameCommands.Enable();
-
+            InputManager.Instance.Actions.GameCommands.Enable();
         }
 
         private void OnDestroy()
         {
-            Input.InputManager.Instance.Actions.GameCommands.Disable();
+            InputManager.Instance.Actions.GameCommands.Disable();
         }
 
         private GameObject LoadMap(int index)
@@ -42,27 +41,27 @@ namespace AutumnYard.Example1
         private void LoadPlayer(Vector3 position)
         {
             _currentPlayer = GameObject.Instantiate(playerPrefab, position, Quaternion.identity);
-            _currentPlayer.Configure(playerConfiguration, Input.InputManager.Instance);
+            _currentPlayer.Configure(playerConfiguration, InputManager.Instance);
         }
 
         private void Update()
         {
-            if (_currentState == State.UI && Input.InputManager.Instance.Actions.Menu.Cancel.triggered)
+            if (_currentState == State.UI && InputManager.Instance.Actions.Menu.Cancel.triggered)
             {
                 ChangeMode_ToPlay();
             }
 
             if (_currentState == State.Play)
             {
-                if (Input.InputManager.Instance.Actions.GameCommands.OpenMenuPause.triggered)
+                if (InputManager.Instance.Actions.GameCommands.OpenMenuPause.triggered)
                 {
                     Button_OpenPause();
                 }
-                else if (Input.InputManager.Instance.Actions.GameCommands.OpenMenuInventory.triggered)
+                else if (InputManager.Instance.Actions.GameCommands.OpenMenuInventory.triggered)
                 {
                     ChangeMode_ToUI(UI.UIManager.Menu.Inventory);
                 }
-                else if (Input.InputManager.Instance.Actions.GameCommands.OpenMenuStatus.triggered)
+                else if (InputManager.Instance.Actions.GameCommands.OpenMenuStatus.triggered)
                 {
                     ChangeMode_ToUI(UI.UIManager.Menu.Status);
                 }
@@ -79,7 +78,7 @@ namespace AutumnYard.Example1
 
             // Enter new
             _currentPlayer.ChangeState(Player.PlayerActor.State.Normal);
-            Input.InputManager.Instance.Actions.GameCommands.Enable();
+            InputManager.Instance.Actions.GameCommands.Enable();
 
             _currentState = State.Play;
             onChangeState?.Invoke(_currentState);
@@ -89,7 +88,7 @@ namespace AutumnYard.Example1
             if (_currentState == State.UI) return;
 
             // Exit previous
-            Input.InputManager.Instance.Actions.GameCommands.Disable();
+            InputManager.Instance.Actions.GameCommands.Disable();
             _currentPlayer.ChangeState(Player.PlayerActor.State.Stopped);
 
             // Enter new

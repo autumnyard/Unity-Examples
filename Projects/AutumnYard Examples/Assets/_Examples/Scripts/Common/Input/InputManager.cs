@@ -2,7 +2,7 @@
 using UnityEngine.InputSystem;
 using AutumnYard.Plugins.InputSystem;
 
-namespace AutumnYard.Example1.Input
+namespace AutumnYard.Common.Input
 {
     public enum ControlMode { None, Menu, Game, UI }
 

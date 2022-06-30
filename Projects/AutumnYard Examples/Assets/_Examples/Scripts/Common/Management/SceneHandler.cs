@@ -3,19 +3,20 @@ using AutumnYard.Tools.Scenes;
 
 // An example of using the module AutumnYard.Plugins.Scene
 
-namespace AutumnYard.Example1
+namespace AutumnYard.Common
 {
     /// <summary> A wrapper for 'DictOfScenesHandler', and store the Dictionary of Scenes. </summary>
     public sealed partial class SceneHandler : SingletonComponent<SceneHandler>
     {
-        public enum Context { None, Menu, Game, Debug }
+        public enum Context { None, Menu, Example1, Example2, Debug }
 
         private readonly IReadOnlyDictionary<Context, ISceneLoader> _loaders
             = new Dictionary<Context, ISceneLoader>()
             {
                 { Context.None, null },
                 { Context.Menu, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Menu") },
-                { Context.Game, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Game - Example1") },
+                { Context.Example1, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Game - Example 1") },
+                { Context.Example2, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Game - Example 2") },
                 { Context.Debug, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Debug") },
             };
 

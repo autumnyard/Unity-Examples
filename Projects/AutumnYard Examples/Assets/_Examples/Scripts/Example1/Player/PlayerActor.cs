@@ -1,4 +1,5 @@
 using UnityEngine;
+using AutumnYard.Common.Input;
 using AutumnYard.Example1.Input;
 
 namespace AutumnYard.Example1.Player

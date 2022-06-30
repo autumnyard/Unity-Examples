@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace AutumnYard.Example1
+namespace AutumnYard.Common
 {
     public sealed class GlobalEvents : MonoBehaviour
     {

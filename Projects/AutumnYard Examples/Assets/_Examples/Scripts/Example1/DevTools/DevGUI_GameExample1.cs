@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace AutumnYard.Example1.DevTools
 {
-    public sealed class DevGUI_Game : MonoBehaviour
+    public sealed class DevGUI_GameExample1 : MonoBehaviour
     {
         private const int RectWidth = 400;
         private const int RectHeight = 400;

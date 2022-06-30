@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace AutumnYard.Example1.Menu
+namespace AutumnYard.Common.Menu
 {
     public sealed class MenuDirector : MonoBehaviour
     {
@@ -55,7 +55,8 @@ namespace AutumnYard.Example1.Menu
             _currentPanel = newState;
         }
 
-        public void Button_Main_Play() => SceneHandler.Instance.ChangeContext(SceneHandler.Context.Game);
+        public void Button_Main_PlayExample1() => SceneHandler.Instance.ChangeContext(SceneHandler.Context.Example1);
+        public void Button_Main_PlayExample2() => SceneHandler.Instance.ChangeContext(SceneHandler.Context.Example2);
         public void Button_Main_Options() => ChangeState(Panel.Options);
         public void Button_Main_Exit() => Application.Quit();
         public void Button_Back() => ChangeState(Panel.Main);
