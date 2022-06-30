@@ -1,9 +1,7 @@
 {
     "name": "LeanTween.Editor",
     "rootNamespace": "",
-    "references": [
-        "GUID:6c0a507a0d3737346b3b1bb36da73ee7"
-    ],
+    "references": [],
     "includePlatforms": [
         "Editor"
     ],
