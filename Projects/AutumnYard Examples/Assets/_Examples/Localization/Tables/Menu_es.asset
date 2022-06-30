@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Menu_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 493f51e8c1568b941b7153813bff751c, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 92507209728
+    m_Localized: Jugar!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 188045066240
+    m_Localized: Opciones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 204792922112
+    m_Localized: 'por: Pablo de la Ossa (AutumnYard) autumnyard.com'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 243019808768
+    m_Localized: "\xC9sta demo ejemplo muestra los siguientes m\xF3dulos:\n- <b>Player
+      e Input</b>. (flechas, WASD y t\xE1ctil)\n- <b>Manejo de escenas</b> con SceneHandler
+      y mapas.\n- <b>Sistema de UI</b>.\n- <b>Localization</b>."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12078125154304
+    m_Localized: Salir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12280408047616
+    m_Localized: Volver
+    m_Metadata:
+      m_Items: []
+  - m_Id: 126813311074304
+    m_Localized: Continuar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3322140088336384
+    m_Localized: "Men\xFA"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

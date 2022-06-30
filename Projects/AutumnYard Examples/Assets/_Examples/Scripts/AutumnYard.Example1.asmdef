@@ -1,0 +1,20 @@
+{
+    "name": "AutumnYard.Example1",
+    "rootNamespace": "AutumnYard.Example1",
+    "references": [
+        "GUID:8957c4b34cbb08548a872adcd186c82b",
+        "GUID:4b3c9f0478d24bc4aa50260b3b750bc1",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:4c4ca1201cebb7849b2b9e40b5a32218",
+        "GUID:17e6422e0b0725844960f5967479f287"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
