@@ -67,31 +67,26 @@ namespace AutumnYard.Tools.Build
                     {
                         List<string> scenes = new List<string>();
 
-                        scenes.Add("Assets/_autumnyard/Scenes/Initial.unity");
-                        scenes.Add("Assets/_autumnyard/Scenes/Loading.unity");
-                        scenes.Add("Assets/_autumnyard/Scenes/Contexts/MainMenu.unity");
-                        scenes.Add("Assets/_autumnyard/Scenes/Contexts/Credits.unity");
+                        scenes.Add("Assets/_Examples/Scenes/Menu.unity");
+                        scenes.Add("Assets/_Examples/Scenes/Loading.unity");
+                        scenes.Add("Assets/_Examples/Scenes/Game - Example 1.unity");
+                        scenes.Add("Assets/_Examples/Scenes/Game - Example 2.unity");
 
-                        scenes.Add("Assets/_autumnyard/Scenes/Maps/MapLairLighting_02.unity");
-                        scenes.Add("Assets/_autumnyard/Scenes/Maps/MapLairLighting_01.unity");
-
-                        scenes.Add("Assets/_autumnyard/Scenes/Contexts/Game.unity");
-
-                        if (configuration.includeGyms)
-                        {
-                            var asds = AssetDatabase.FindAssets("t:Scene Gym", new string[] { "Assets/_autumnyard/Scenes" });
-                            foreach (var item in asds)
-                            {
-                                var scenePath = AssetDatabase.GUIDToAssetPath(item);
-                                scenes.Add(scenePath);
-                            }
-                        }
-                        if (configuration.includeSaveEditor)
-                        {
-                            scenes.Add("Assets/_autumnyard/Scenes/Contexts/SaveEditor.unity");
-                        }
+                        //if (configuration.includeGyms)
+                        //{
+                        //    var asds = AssetDatabase.FindAssets("t:Scene Gym", new string[] { "Assets/_autumnyard/Scenes" });
+                        //    foreach (var item in asds)
+                        //    {
+                        //        var scenePath = AssetDatabase.GUIDToAssetPath(item);
+                        //        scenes.Add(scenePath);
+                        //    }
+                        //}
+                        //if (configuration.includeSaveEditor)
+                        //{
+                        //    scenes.Add("Assets/_autumnyard/Scenes/Contexts/SaveEditor.unity");
+                        //}
 #if AUTUMNYARD_DEBUG
-                        scenes.Add("Assets/_autumnyard/Scenes/DebugOverlayMap.unity");
+                        scenes.Add("Assets/_Examples/Scenes/Debug.unity");
 #endif
 
                         return scenes.ToArray();
