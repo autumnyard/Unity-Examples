@@ -14,16 +14,16 @@ namespace AutumnYard.Example1.DevTools
         [SerializeField] private bool show = true;
         [SerializeField] private GUISkin skin;
 
-        private GameDirector _game;
-        private UI.UIManager _ui;
+        private Example1Director _game;
+        private UI.Example1UIManager _ui;
         private UI.HUDManager _hud;
         private Player.PlayerActor _player;
         private Inventory _inventory;
 
         private void Start()
         {
-            _game = FindObjectOfType<GameDirector>();
-            _ui = FindObjectOfType<UI.UIManager>();
+            _game = FindObjectOfType<Example1Director>();
+            _ui = FindObjectOfType<UI.Example1UIManager>();
             _hud = FindObjectOfType<UI.HUDManager>();
             _player = FindObjectOfType<Player.PlayerActor>();
             _inventory = Inventory.Instance;

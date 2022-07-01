@@ -1,5 +1,5 @@
 ﻿
-namespace AutumnYard.Example1.UI
+namespace AutumnYard.Common.UI
 {
     public sealed class MenuPause : MenuBase
     {

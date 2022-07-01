@@ -12,12 +12,12 @@ namespace AutumnYard.Example1.UI
     public sealed class HUDPlayerStats : HUDBase
     {
         [SerializeField] private TextDisplay text;
-        [SerializeField] private GameDirector director;
+        [SerializeField] private Example1Director director;
 
         private void OnValidate()
         {
             if (text == null) text = GetComponentInChildren<TextDisplay>();
-            if (director == null) director = FindObjectOfType<GameDirector>();
+            if (director == null) director = FindObjectOfType<Example1Director>();
         }
 
         protected override void Configure()
@@ -30,7 +30,7 @@ namespace AutumnYard.Example1.UI
             director.onChangeState -= SetGameState;
         }
 
-        private void SetGameState(GameDirector.State newState)
+        private void SetGameState(Example1Director.State newState)
         {
             text.Set($"Player: <b>{newState}</b>");
         }

@@ -15,7 +15,7 @@ namespace AutumnYard.Example1.UI
         [SerializeField]
         private HUDBase[] huds;
 
-        private GameDirector _director;
+        private Example1Director _director;
         private HUDCollection[] _states;
 
         public State CurrentState => _currentState;
@@ -44,7 +44,7 @@ namespace AutumnYard.Example1.UI
                 huds[(int)HUD.PlayerStats] = GetComponentInChildren<HUDPlayerStats>();
             }
 
-            if (_director == null) _director = FindObjectOfType<GameDirector>();
+            if (_director == null) _director = FindObjectOfType<Example1Director>();
         }
 
         private void Start()
@@ -65,15 +65,15 @@ namespace AutumnYard.Example1.UI
 
         #region FSM
 
-        private void HandleChangeGameState(GameDirector.State newGameState)
+        private void HandleChangeGameState(Example1Director.State newGameState)
         {
             switch (newGameState)
             {
-                case GameDirector.State.Play:
+                case Example1Director.State.Play:
                     SetState(State.Game);
                     break;
 
-                case GameDirector.State.UI:
+                case Example1Director.State.UI:
                     SetState(State.Empty);
                     break;
 

@@ -1,7 +1,7 @@
 
 namespace AutumnYard.Example1.UI
 {
-    public sealed class MenuStatus : MenuBase
+    public sealed class MenuStatus : Common.UI.MenuBase
     {
         public struct Data
         {

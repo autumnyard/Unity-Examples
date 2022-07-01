@@ -1,7 +1,7 @@
 
 namespace AutumnYard.Example1.UI
 {
-    public sealed class MenuInventory : MenuBase
+    public sealed class MenuInventory : Common.UI.MenuBase
     {
         private Inventory _data;
 

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 24796390976265864}
-  - component: {fileID: 24796390976265865}
+  - component: {fileID: 7152241261557679759}
   - component: {fileID: 24796390976265870}
   m_Layer: 5
   m_Name: Menu Touch
@@ -39,7 +39,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &24796390976265865
+--- !u!114 &7152241261557679759
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 24796390976265867}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87bec7f13409e8f49aea1e6b74b80605, type: 3}
+  m_Script: {fileID: 11500000, guid: 89489c9805ea6b64bbf743748ec5acfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   defaultSelection: {fileID: 0}
@@ -72,12 +72,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 24796390976265864}
     m_Modifications:
     - target: {fileID: 2603465923255490580, guid: 4c25e0c1d2775574f9951df31ae4970c, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2603465923255490580, guid: 4c25e0c1d2775574f9951df31ae4970c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2603465923255490580, guid: 4c25e0c1d2775574f9951df31ae4970c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Button_OpenPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 2603465923255490580, guid: 4c25e0c1d2775574f9951df31ae4970c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AutumnYard.Example1.Example1Director, AutumnYard.Game.Example1
       objectReference: {fileID: 0}
     - target: {fileID: 2603465923255490581, guid: 4c25e0c1d2775574f9951df31ae4970c, type: 3}
       propertyPath: m_Pivot.x
@@ -166,6 +174,10 @@ PrefabInstance:
     - target: {fileID: 2603465923255490586, guid: 4c25e0c1d2775574f9951df31ae4970c, type: 3}
       propertyPath: m_Name
       value: Button Unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 8356303684771021842, guid: 4c25e0c1d2775574f9951df31ae4970c, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 3322140088336384
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c25e0c1d2775574f9951df31ae4970c, type: 3}

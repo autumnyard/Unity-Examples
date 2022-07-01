@@ -1,11 +1,12 @@
 ﻿using System;
 using UnityEngine;
 using AutumnYard.Common;
+using AutumnYard.Common.UI;
 using AutumnYard.Common.Input;
 
 namespace AutumnYard.Example1
 {
-    public sealed class GameDirector : MonoBehaviour
+    public sealed class Example1Director : MonoBehaviour
     {
         public enum State { Play, UI }
         private State _currentState;
@@ -17,11 +18,13 @@ namespace AutumnYard.Example1
         [SerializeField] private GameObject[] maps;
         private GameObject _currentMap;
         private Player.PlayerActor _currentPlayer;
-        [SerializeField] private UI.UIManager _ui;
+        [SerializeField] private UI.Example1UIManager _ui;
 
         private void Awake()
         {
-            //_ui = UI.UIManager.Instance;
+            //_ui = UIManager.Instance;
+            if (_ui == null) _ui = FindObjectOfType<UI.Example1UIManager>();
+
             SceneHandler.Instance.ForceSetCurrentContext(SceneHandler.Context.Example1);
             _currentMap = LoadMap(0);
             LoadPlayer(Vector3.zero);
@@ -59,11 +62,11 @@ namespace AutumnYard.Example1
                 }
                 else if (InputManager.Instance.Actions.GameCommands.OpenMenuInventory.triggered)
                 {
-                    ChangeMode_ToUI(UI.UIManager.Menu.Inventory);
+                    ChangeMode_ToUI(UI.Example1UIManager.Menu.Inventory);
                 }
                 else if (InputManager.Instance.Actions.GameCommands.OpenMenuStatus.triggered)
                 {
-                    ChangeMode_ToUI(UI.UIManager.Menu.Status);
+                    ChangeMode_ToUI(UI.Example1UIManager.Menu.Status);
                 }
             }
         }
@@ -83,7 +86,7 @@ namespace AutumnYard.Example1
             _currentState = State.Play;
             onChangeState?.Invoke(_currentState);
         }
-        private void ChangeMode_ToUI(UI.UIManager.Menu menuToOpen)
+        private void ChangeMode_ToUI(UI.Example1UIManager.Menu menuToOpen)
         {
             if (_currentState == State.UI) return;
 
@@ -94,15 +97,15 @@ namespace AutumnYard.Example1
             // Enter new
             switch (menuToOpen)
             {
-                case UI.UIManager.Menu.Status:
+                case UI.Example1UIManager.Menu.Status:
                     _ui.OpenStatus(new UI.MenuStatus.Data(7, "Prueba"));
                     break;
 
-                case UI.UIManager.Menu.Inventory:
+                case UI.Example1UIManager.Menu.Inventory:
                     _ui.OpenInventory(Inventory.Instance);
                     break;
 
-                case UI.UIManager.Menu.Pause:
+                case UI.Example1UIManager.Menu.Pause:
                     _ui.OpenPause();
                     break;
             }
@@ -112,7 +115,7 @@ namespace AutumnYard.Example1
         }
 
 
-        public void Button_OpenPause() => ChangeMode_ToUI(UI.UIManager.Menu.Pause);
+        public void Button_OpenPause() => ChangeMode_ToUI(UI.Example1UIManager.Menu.Pause);
         public void Button_Resume() => ChangeMode_ToPlay();
         public void Button_Exit() => SceneHandler.Instance.ChangeContext(SceneHandler.Context.Menu);
     }

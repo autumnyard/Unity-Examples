@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace AutumnYard.Example1.UI
+namespace AutumnYard.Common.UI
 {
     [RequireComponent(typeof(CanvasGroup))]
     public abstract class MenuBase : MonoBehaviour
