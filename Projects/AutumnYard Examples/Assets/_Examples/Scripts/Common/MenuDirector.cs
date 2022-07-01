@@ -55,8 +55,7 @@ namespace AutumnYard.Common.Menu
             _currentPanel = newState;
         }
 
-        public void Button_Main_PlayExample1() => SceneHandler.Instance.ChangeContext(SceneHandler.Context.Example1);
-        public void Button_Main_PlayExample2() => SceneHandler.Instance.ChangeContext(SceneHandler.Context.Example2);
+        public void Button_Main_PlayExample(int index) => SceneHandler.Instance.ChangeContext(SceneHandler.Context.Example1 + index);
         public void Button_Main_Options() => ChangeState(Panel.Options);
         public void Button_Main_Exit() => Application.Quit();
         public void Button_Back() => ChangeState(Panel.Main);
