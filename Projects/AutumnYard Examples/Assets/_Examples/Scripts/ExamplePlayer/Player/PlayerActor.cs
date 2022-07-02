@@ -44,7 +44,7 @@ namespace AutumnYard.ExamplePlayer.Player
 
             var inputs = _input.GetInputs();
             _movement.UpdateWithInputs(inputs);
-            _combat.UpdateWithInputs(inputs);
+            if (_combat != null) _combat.UpdateWithInputs(inputs);
             //if (inputs.AnyInput) Debug.Log(inputs.ToString());
         }
 

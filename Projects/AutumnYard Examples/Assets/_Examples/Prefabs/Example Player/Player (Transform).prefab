@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &336594913
 Transform:
   m_ObjectHideFlags: 0
@@ -115,7 +115,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1789373101
 Transform:
   m_ObjectHideFlags: 0
@@ -212,7 +212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2067613244
 Transform:
   m_ObjectHideFlags: 0
@@ -301,7 +301,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6844975718081526127}
   - component: {fileID: 6844975718081526120}
-  - component: {fileID: 404459527}
   - component: {fileID: 6844975718081526121}
   m_Layer: 0
   m_Name: Player (Transform)
@@ -341,24 +340,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27b32ff5cc75ef14cac9b7b2ca8b42fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  configuration: {fileID: 11400000, guid: 352c62a32e7a0cc49b4a350563ee02cd, type: 2}
-  _combat: {fileID: 404459527}
---- !u!114 &404459527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6844975718081526122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 900a58034bafefe49b4ec0c27434e0fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attack: {fileID: 336594912}
-  parry: {fileID: 1789373100}
-  defense: {fileID: 2067613243}
-  configuration: {fileID: 11400000, guid: 352c62a32e7a0cc49b4a350563ee02cd, type: 2}
 --- !u!54 &6844975718081526121
 Rigidbody:
   m_ObjectHideFlags: 0

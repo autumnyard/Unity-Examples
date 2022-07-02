@@ -40,8 +40,7 @@ namespace AutumnYard.ExamplePlayer
 
         private void LoadMap(uint index)
         {
-            if (index <= 0) return;
-            if (index >= maps.Length) return;
+             if (index >= maps.Length) return;
 
             // Change this if I want to reset map
             if (_currentMap.Index == index) return;
