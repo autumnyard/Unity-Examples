@@ -8,15 +8,23 @@ namespace AutumnYard.Common
     /// <summary> A wrapper for 'DictOfScenesHandler', and store the Dictionary of Scenes. </summary>
     public sealed partial class SceneHandler : SingletonComponent<SceneHandler>
     {
-        public enum Context { None, Menu, Example1, Example2, Debug }
+        public enum Context 
+        { 
+            None, 
+            Menu, 
+            ExamplePlayer, ExampleCards, ExamplePointAndClick, ExampleWorld,
+            Debug 
+        }
 
         private readonly IReadOnlyDictionary<Context, ISceneLoader> _loaders
             = new Dictionary<Context, ISceneLoader>()
             {
                 { Context.None, null },
                 { Context.Menu, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Menu") },
-                { Context.Example1, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Game - Example 1") },
-                { Context.Example2, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Game - Example 2") },
+                { Context.ExamplePlayer, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Game - Example Player") },
+                { Context.ExampleCards, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Game - Example Cards") },
+                { Context.ExamplePointAndClick, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Game - Example PointAndClick") },
+                { Context.ExampleWorld, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Game - Example World") },
                 { Context.Debug, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Debug") },
             };
 

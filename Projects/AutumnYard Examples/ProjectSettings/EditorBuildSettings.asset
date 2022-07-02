@@ -12,8 +12,17 @@ EditorBuildSettings:
     path: Assets/_Examples/Scenes/Loading.unity
     guid: 29dc4027298f48149a6170b8edf46063
   - enabled: 1
-    path: Assets/_Examples/Scenes/Game - Example1.unity
+    path: Assets/_Examples/Scenes/Game - Example Cards.unity
+    guid: e766a37496b4cf245a409f7116599909
+  - enabled: 1
+    path: Assets/_Examples/Scenes/Game - Example Player.unity
     guid: 1eb386a6212d221459d56c279b83b2ee
+  - enabled: 1
+    path: Assets/_Examples/Scenes/Game - Example PointAndClick.unity
+    guid: 06ea9cffa1e2eb84cb6338f2c94eadff
+  - enabled: 1
+    path: Assets/_Examples/Scenes/Game - Example World.unity
+    guid: 450385e97e967ae409ac8fa3b16a6f1d
   - enabled: 1
     path: Assets/_Examples/Scenes/Debug.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640

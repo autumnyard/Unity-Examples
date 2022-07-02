@@ -69,8 +69,10 @@ namespace AutumnYard.Tools.Build
 
                         scenes.Add("Assets/_Examples/Scenes/Menu.unity");
                         scenes.Add("Assets/_Examples/Scenes/Loading.unity");
-                        scenes.Add("Assets/_Examples/Scenes/Game - Example 1.unity");
-                        scenes.Add("Assets/_Examples/Scenes/Game - Example 2.unity");
+                        scenes.Add("Assets/_Examples/Scenes/Game - Example Cards.unity");
+                        scenes.Add("Assets/_Examples/Scenes/Game - Example Player.unity");
+                        scenes.Add("Assets/_Examples/Scenes/Game - Example PointAndClick.unity");
+                        scenes.Add("Assets/_Examples/Scenes/Game - Example World.unity");
 
                         //if (configuration.includeGyms)
                         //{
