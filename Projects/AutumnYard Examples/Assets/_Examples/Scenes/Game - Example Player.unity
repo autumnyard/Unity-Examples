@@ -618,8 +618,9 @@ MonoBehaviour:
   playerPrefab: {fileID: 6844975718081526120, guid: 024525c4bf84c9e48907ce118867eda9, type: 3}
   playerConfiguration: {fileID: 11400000, guid: 352c62a32e7a0cc49b4a350563ee02cd, type: 2}
   maps:
-  - {fileID: 4718251731448176051, guid: f1051eb20a4207645b380ea73e223a07, type: 3}
-  - {fileID: 4718251731448176051, guid: dfa4dcc3295a0894bad384748cc1f389, type: 3}
+  - {fileID: 1543475074503791759, guid: f1051eb20a4207645b380ea73e223a07, type: 3}
+  - {fileID: 215404003, guid: dfa4dcc3295a0894bad384748cc1f389, type: 3}
+  - {fileID: 215404003, guid: 6d21ac457efaf2c4094356820b2b4425, type: 3}
   _ui: {fileID: 1507841309}
 --- !u!224 &816850210 stripped
 RectTransform:

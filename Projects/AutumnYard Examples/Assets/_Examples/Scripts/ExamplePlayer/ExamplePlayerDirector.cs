@@ -17,8 +17,8 @@ namespace AutumnYard.ExamplePlayer
         [SerializeField] private Player.PlayerConfiguration playerConfiguration;
         private Player.PlayerActor _currentPlayer;
 
-        [SerializeField] private GameObject[] maps;
-        private (uint Index, GameObject Script) _currentMap;
+        [SerializeField] private Map[] maps;
+        private (uint Index, Map Script) _currentMap;
 
         [SerializeField] private UI.ExamplePlayerUI _ui;
 
@@ -40,6 +40,7 @@ namespace AutumnYard.ExamplePlayer
 
         private void LoadMap(uint index)
         {
+            if (index <= 0) return;
             if (index >= maps.Length) return;
 
             // Change this if I want to reset map
@@ -53,9 +54,12 @@ namespace AutumnYard.ExamplePlayer
 
             _currentMap = (index, Instantiate(maps[index]));
 
-            _currentPlayer = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
+            _currentPlayer = Instantiate(playerPrefab, _currentMap.Script.PlayerSpawn.position, Quaternion.identity);
             _currentPlayer.Configure(playerConfiguration, InputManager.Instance);
         }
+        private void LoadNextMap() => LoadMap(_currentMap.Index + 1);
+        private void LoadPreviousMap() => LoadMap(_currentMap.Index - 1);
+        private void LoadFirstMap() => LoadMap(0);
 
         private void Update()
         {
@@ -81,11 +85,11 @@ namespace AutumnYard.ExamplePlayer
 
                 if (UnityEngine.InputSystem.Keyboard.current.digit1Key.wasPressedThisFrame)
                 {
-                    LoadMap(0);
+                    LoadPreviousMap();
                 }
                 else if (UnityEngine.InputSystem.Keyboard.current.digit2Key.wasPressedThisFrame)
                 {
-                    LoadMap(1);
+                    LoadNextMap();
                 }
             }
         }
