@@ -12,7 +12,7 @@ namespace AutumnYard.Common
         { 
             None, 
             Menu, 
-            ExamplePlayer, ExampleCards, ExamplePointAndClick, ExampleWorld,
+            ExamplePlayer, ExampleCards, ExampleWorld, ExamplePointAndClick,
             Debug 
         }
 
@@ -23,8 +23,8 @@ namespace AutumnYard.Common
                 { Context.Menu, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Menu") },
                 { Context.ExamplePlayer, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Game - Example Player") },
                 { Context.ExampleCards, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Game - Example Cards") },
-                { Context.ExamplePointAndClick, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Game - Example PointAndClick") },
                 { Context.ExampleWorld, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Game - Example World") },
+                { Context.ExamplePointAndClick, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Game - Example PointAndClick") },
                 { Context.Debug, new SceneInBuildLoader( UnityEngine.SceneManagement.LoadSceneMode.Additive, "Debug") },
             };
 

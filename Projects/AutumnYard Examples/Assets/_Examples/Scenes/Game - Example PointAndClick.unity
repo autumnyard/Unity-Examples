@@ -669,10 +669,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 640759994}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f9d1560d2291764f887a237a1cbabfb, type: 3}
+  m_Script: {fileID: 11500000, guid: 672dc4426a6a0d240b8372958af1f2ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ui: {fileID: 0}
+  _ui: {fileID: 1507841309}
 --- !u!1 &1412939041
 GameObject:
   m_ObjectHideFlags: 0
@@ -862,7 +862,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1507841304}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb3f369401c03cc439e6bf0a79597da3, type: 3}
+  m_Script: {fileID: 11500000, guid: 987f2efce11f4a64f8e4b1a6abe46456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   background: {fileID: 592905333}
@@ -1119,7 +1119,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2628209206419760204, guid: 4aa04a217f343d344a96ea97d46ca028, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AutumnYard.Example2.Example2Director, AutumnYard.Example2
+      value: AutumnYard.ExamplePointAndClick.ExamplePointAndClickDirector, AutumnYard.ExamplePointAndClick
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4aa04a217f343d344a96ea97d46ca028, type: 3}
@@ -1151,7 +1151,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6603055148272493687, guid: 47feb69b04702a24cb11f5c3472bfc6c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AutumnYard.Example2.Example2Director, AutumnYard.Example2
+      value: AutumnYard.ExamplePointAndClick.ExamplePointAndClickDirector, AutumnYard.ExamplePointAndClick
       objectReference: {fileID: 0}
     - target: {fileID: 6603055149230188333, guid: 47feb69b04702a24cb11f5c3472bfc6c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1163,7 +1163,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6603055149230188333, guid: 47feb69b04702a24cb11f5c3472bfc6c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: AutumnYard.Example2.Example2Director, AutumnYard.Example2
+      value: AutumnYard.ExamplePointAndClick.ExamplePointAndClickDirector, AutumnYard.ExamplePointAndClick
       objectReference: {fileID: 0}
     - target: {fileID: 9188361227600998630, guid: 47feb69b04702a24cb11f5c3472bfc6c, type: 3}
       propertyPath: m_Pivot.x

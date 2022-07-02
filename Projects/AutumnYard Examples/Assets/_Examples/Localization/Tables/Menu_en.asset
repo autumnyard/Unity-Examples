@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 92507209728
-    m_Localized: Play!
+    m_Localized: Cards!
     m_Metadata:
       m_Items: []
   - m_Id: 188045066240
@@ -60,6 +60,18 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 3322140088336384
     m_Localized: Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4362513891983360
+    m_Localized: Movement!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4362516014301184
+    m_Localized: Point'n Click!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4362517612331008
+    m_Localized: World!
     m_Metadata:
       m_Items: []
   references:

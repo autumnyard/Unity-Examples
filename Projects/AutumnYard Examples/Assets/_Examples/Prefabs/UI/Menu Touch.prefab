@@ -173,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2603465923255490586, guid: 4c25e0c1d2775574f9951df31ae4970c, type: 3}
       propertyPath: m_Name
-      value: Button Unity
+      value: Button Open Pause
       objectReference: {fileID: 0}
     - target: {fileID: 8356303684771021842, guid: 4c25e0c1d2775574f9951df31ae4970c, type: 3}
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
