@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 2603465923255490580}
   - component: {fileID: 9188361227882638289}
   m_Layer: 5
-  m_Name: Button Unity
+  m_Name: Button Common
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
