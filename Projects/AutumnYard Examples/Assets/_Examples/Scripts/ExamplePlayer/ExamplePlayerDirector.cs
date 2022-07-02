@@ -15,9 +15,11 @@ namespace AutumnYard.ExamplePlayer
 
         [SerializeField] private Player.PlayerActor playerPrefab;
         [SerializeField] private Player.PlayerConfiguration playerConfiguration;
-        [SerializeField] private GameObject[] maps;
-        private GameObject _currentMap;
         private Player.PlayerActor _currentPlayer;
+
+        [SerializeField] private GameObject[] maps;
+        private (uint Index, GameObject Script) _currentMap;
+
         [SerializeField] private UI.ExamplePlayerUI _ui;
 
         private void Awake()
@@ -26,24 +28,32 @@ namespace AutumnYard.ExamplePlayer
             if (_ui == null) _ui = FindObjectOfType<UI.ExamplePlayerUI>();
 
             SceneHandler.Instance.ForceSetCurrentContext(SceneHandler.Context.ExamplePlayer);
-            _currentMap = LoadMap(0);
-            LoadPlayer(Vector3.zero);
+
+            LoadMap(1);
 
             InputManager.Instance.Actions.GameCommands.Enable();
         }
-
         private void OnDestroy()
         {
             InputManager.Instance.Actions.GameCommands.Disable();
         }
 
-        private GameObject LoadMap(int index)
+        private void LoadMap(uint index)
         {
-            return GameObject.Instantiate(maps[index]);
-        }
-        private void LoadPlayer(Vector3 position)
-        {
-            _currentPlayer = GameObject.Instantiate(playerPrefab, position, Quaternion.identity);
+            if (index >= maps.Length) return;
+
+            // Change this if I want to reset map
+            if (_currentMap.Index == index) return;
+
+            if (_currentPlayer != null)
+                DestroyImmediate(_currentPlayer.gameObject);
+
+            if (_currentMap.Script != null)
+                DestroyImmediate(_currentMap.Script.gameObject);
+
+            _currentMap = (index, Instantiate(maps[index]));
+
+            _currentPlayer = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity);
             _currentPlayer.Configure(playerConfiguration, InputManager.Instance);
         }
 
@@ -68,9 +78,17 @@ namespace AutumnYard.ExamplePlayer
                 {
                     ChangeMode_ToUI(UI.ExamplePlayerUI.Menu.Status);
                 }
+
+                if (UnityEngine.InputSystem.Keyboard.current.digit1Key.wasPressedThisFrame)
+                {
+                    LoadMap(0);
+                }
+                else if (UnityEngine.InputSystem.Keyboard.current.digit2Key.wasPressedThisFrame)
+                {
+                    LoadMap(1);
+                }
             }
         }
-
 
         private void ChangeMode_ToPlay()
         {
@@ -113,7 +131,6 @@ namespace AutumnYard.ExamplePlayer
             _currentState = State.UI;
             onChangeState?.Invoke(_currentState);
         }
-
 
         public void Button_OpenPause() => ChangeMode_ToUI(UI.ExamplePlayerUI.Menu.Pause);
         public void Button_Resume() => ChangeMode_ToPlay();
