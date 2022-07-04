@@ -1,6 +1,8 @@
 # Unity-Examples
 
 My portfolio of examples, modules and tools.
+- **Core**: [AutumnYard/Scripts](Projects/AutumnYard%20Examples/Assets/_AutumnYard/Scripts)
+- **Examples**: [Examples/Scripts](Projects/AutumnYard%20Examples/Assets/_Examples/Scripts)
 
 ---
 
@@ -12,7 +14,14 @@ Four different implementations of the singleton pattern:
 - *SingletonPOCO*: Just a simple C# object.
 - *SingletonComponent*: A MonoBehaviour that can be used as component.
 - *SingleInstance*: A MonoBehaviour without lazy initialization.
-- *SingletonAsset*: A ScriptableObject that can be used as an asset. Must be stored in the Resources folder.
+- *SingletonAsset*: A singleton that is instanced as an asset. Must be stored in the Resources folder.
+
+```cs
+abstract class SingletonPOCO<T> where T : new()
+abstract class SingletonComponent<T> : MonoBehaviour where T : MonoBehaviour
+abstract class SingletonAsset<T> : ScriptableObject where T : ScriptableObject
+abstract class SingleInstance<T> : MonoBehaviour where T : MonoBehaviour
+```
 
 **Tasker**:
 Implement and instantiate one or more *ITask* objects.
@@ -21,7 +30,6 @@ Call *Update*, *Enqueue* and *Insert* to manage.
 
 **Updater**:
 Instantiate the IUpdater interface, and then call Tools.Update with it.
-
 ### Core/Types
 ```cs
 struct CounterFloat, struct CounterInt // Set a threshold and count.
