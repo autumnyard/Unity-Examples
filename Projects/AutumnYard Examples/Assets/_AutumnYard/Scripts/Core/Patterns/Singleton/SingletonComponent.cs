@@ -9,15 +9,15 @@ using UnityEditor;
 
 namespace AutumnYard
 {
-    public abstract class SingletonComponent<TComponent> : MonoBehaviour where TComponent : MonoBehaviour
+    public abstract class SingletonComponent<T> : MonoBehaviour where T : MonoBehaviour
     {
-        private static TComponent instance;
+        private static T instance;
         private static bool hasInstance;
         private static int instanceId;
         private static readonly object lockObject = new object();
 
 
-        public static TComponent Instance
+        public static T Instance
         {
             get
             {
@@ -33,7 +33,7 @@ namespace AutumnYard
                     {
                         if (!Application.isPlaying)
                         {
-                            throw new Exception($"We're not in Play, and couldn't find an instance for {typeof(TComponent)}. Therefore, we don't create one.");
+                            throw new Exception($"We're not in Play, and couldn't find an instance for {typeof(T)}. Therefore, we don't create one.");
                         }
 
                         CreateNewInstance();
@@ -41,7 +41,7 @@ namespace AutumnYard
 
                     if (instance == null)
                     {
-                        throw new Exception("The instance of singleton component " + typeof(TComponent) + " was requested, but it doesn't appear to exist in the scene.");
+                        throw new Exception("The instance of singleton component " + typeof(T) + " was requested, but it doesn't appear to exist in the scene.");
                     }
 
                     hasInstance = true;
@@ -53,7 +53,7 @@ namespace AutumnYard
 
         private static void CreateNewInstance()
         {
-            instance = new GameObject(typeof(TComponent).Name).gameObject.AddComponent<TComponent>();
+            instance = new GameObject(typeof(T).Name).gameObject.AddComponent<T>();
             DontDestroyOnLoad(instance);
         }
 
@@ -116,14 +116,14 @@ namespace AutumnYard
             }
         }
 
-        private static TComponent[] FindInstances()
+        private static T[] FindInstances()
         {
-            var objects = FindObjectsOfType<TComponent>();
+            var objects = FindObjectsOfType<T>();
             Array.Sort(objects, (a, b) => a.transform.GetSiblingIndex().CompareTo(b.transform.GetSiblingIndex()));
             return objects;
         }
 
-        private static TComponent FindFirstInstance()
+        private static T FindFirstInstance()
         {
             var objects = FindInstances();
             return objects.Length > 0 ? objects[0] : null;
@@ -139,7 +139,7 @@ namespace AutumnYard
                 if (GetInstanceID() != instanceId)
                 {
 #if UNITY_EDITOR
-                    Debug.LogWarning("A redundant instance (" + name + ") of singleton " + typeof(TComponent) + " is present in the scene.", this);
+                    Debug.LogWarning("A redundant instance (" + name + ") of singleton " + typeof(T) + " is present in the scene.", this);
                     EditorGUIUtility.PingObject(this);
 #endif
                     enabled = false;

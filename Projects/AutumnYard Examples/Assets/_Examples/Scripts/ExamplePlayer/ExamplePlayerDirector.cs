@@ -29,7 +29,7 @@ namespace AutumnYard.ExamplePlayer
 
             SceneHandler.Instance.ForceSetCurrentContext(SceneHandler.Context.ExamplePlayer);
 
-            LoadMap(1);
+            LoadMap(0);
 
             InputManager.Instance.Actions.GameCommands.Enable();
         }
@@ -40,10 +40,10 @@ namespace AutumnYard.ExamplePlayer
 
         private void LoadMap(uint index)
         {
-             if (index >= maps.Length) return;
+            if (index >= maps.Length) return;
 
             // Change this if I want to reset map
-            if (_currentMap.Index == index) return;
+            //if (_currentMap.Index == index) return;
 
             if (_currentPlayer != null)
                 DestroyImmediate(_currentPlayer.gameObject);
