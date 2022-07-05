@@ -1,4 +1,6 @@
-﻿namespace AutumnYard.ExamplePlayer.UI
+﻿using AutumnYard.Common.UI;
+
+namespace AutumnYard.ExamplePlayer.UI
 {
     public sealed partial class HUDManager
     {

@@ -1,6 +1,5 @@
-﻿
-using System;
-using UnityEngine;
+﻿using UnityEngine;
+using AutumnYard.Common.UI;
 
 namespace AutumnYard.ExamplePlayer.UI
 {

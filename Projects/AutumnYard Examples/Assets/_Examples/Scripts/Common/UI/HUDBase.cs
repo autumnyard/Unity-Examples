@@ -1,6 +1,7 @@
 using UnityEngine;
+using AutumnYard.Common.UI;
 
-namespace AutumnYard.ExamplePlayer.UI
+namespace AutumnYard.Common.UI
 {
     [RequireComponent(typeof(CanvasGroup))]
     public abstract class HUDBase : MonoBehaviour

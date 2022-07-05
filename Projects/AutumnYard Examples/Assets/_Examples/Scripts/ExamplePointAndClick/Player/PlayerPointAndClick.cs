@@ -1,23 +1,26 @@
+
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
 namespace AutumnYard.ExamplePointAndClick
 {
-    public sealed class PlayerPointAndClick : MonoBehaviour
+    public sealed class PlayerPointAndClick : SingleInstance<PlayerPointAndClick>
     {
         public struct PlayerState
         {
-            public int Coins;
+            private int _coins;
 
-            public void AddCoin(int quantity) => Coins += quantity;
+            public int Coins => _coins;
+
+            public void AddCoin(int quantity) => _coins += quantity;
         }
 
         private PlayerState _state;
         private Interacter _interacter;
 
-        private void Awake()
+        public PlayerState State => _state;
+        public event Action<PlayerState> onPlayerStateChange;
+
+        protected override void Awake()
         {
             if (_interacter == null) _interacter = GetComponentInChildren<Interacter>();
         }
@@ -40,21 +43,15 @@ namespace AutumnYard.ExamplePointAndClick
         {
             switch (target.Type)
             {
-                case PickableType.Coin:
-                    PickCoin(target);
-                    break;
+                case PickableType.Coin: PickCoin(target); break;
             }
-        }
 
-        private void PickCoin(Pickable target)
-        {
-            _state.AddCoin(1);
-            Destroy(target.gameObject);
-        }
-
-        private void OnGUI()
-        {
-            GUILayout.Label($"Coints: {_state.Coins}");
+            void PickCoin(Pickable target)
+            {
+                _state.AddCoin(1);
+                Destroy(target.gameObject);
+                onPlayerStateChange?.Invoke(_state);
+            }
         }
 
     }

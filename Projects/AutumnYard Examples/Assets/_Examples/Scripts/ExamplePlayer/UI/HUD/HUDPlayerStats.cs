@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
+using AutumnYard.Common.UI;
 using AutumnYard.Core.Display.UI;
 
 namespace AutumnYard.ExamplePlayer.UI
