@@ -115,11 +115,11 @@ Depends on the paid plugin Sirenix Odin.
 
 ## Module/Interactable
 > still not brought here
-![TDD Interactable](Docs\Architecture\TDD%20Module%20-%20Interactables.jpg)
+![TDD Interactable](Docs/Architecture/TDD%20Module%20-%20Interactables.jpg)
 
 ## Module/Conditionals
 > still not brought here
-![TDD Interactable](Docs\Architecture\TDD%20Module%20-%20Conditions.png)
+![TDD Interactable](Docs/Architecture/TDD%20Module%20-%20Conditions.png)
 
 ---
 
@@ -131,6 +131,7 @@ Depends on the paid plugin Sirenix Odin.
 ## Sources and Acknowledgements
 
 Third Party Plugins:
+- **NaughtyAttributes** by dbrizov, [link to github](https://github.com/dbrizov/NaughtyAttributes)
 - **DOTween**
 - **LeanTween**
 
