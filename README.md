@@ -109,6 +109,18 @@ Depends on the paid plugin Sirenix Odin.
 - **Terminal**: A command terminal taken from [stillwwater in github](https://github.com/stillwwater/command_terminal)
 
 
+## Module/Player
+> still not brought here
+![Picture](Docs/Architecture/TDD%20Module%20-%20Player.jpg)
+
+## Module/Interactable
+> still not brought here
+![TDD Interactable](Docs\Architecture\TDD%20Module%20-%20Interactables.jpg)
+
+## Module/Conditionals
+> still not brought here
+![TDD Interactable](Docs\Architecture\TDD%20Module%20-%20Conditions.png)
+
 ---
 
 ## Notes
